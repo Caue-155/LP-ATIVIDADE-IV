@@ -19,20 +19,20 @@ void realizarCompra(struct produto *mercadoria, int quantidade)
     if (quantidade <= mercadoria->quantidadeEmEstoque)
     {
         mercadoria->quantidadeEmEstoque -= quantidade;
-        printf("\nCompra realizada com sucesso!\n");
+        printf("\nCompra realizada com sucesso!\n\n");
     }
     else
     {
-        printf("\nQuantidade inv·lida. A compra n„o foi realizada.\n\n");
+        printf("\nQuantidade inv√°lida. A compra n√£o foi realizada.\n\n");
     }
 }
 
 void consultarEstoque(struct produto mercadoria)
 {
     printf("\nNome do produto: %s", mercadoria.nome);
-    printf("\nPreÁo: R$ %.2f", mercadoria.preco);
+    printf("\nPre√ßo: R$ %.2f", mercadoria.preco);
     printf("\nQuantidade em estoque: %d", mercadoria.quantidadeEmEstoque);
-    printf("\nValor total em estoque: R$ %.2f\n", calcularValorTotal(mercadoria));
+    printf("\nValor total em estoque: R$ %.2f\n\n", calcularValorTotal(mercadoria));
 }
 
 int main()
@@ -46,7 +46,7 @@ int main()
     printf("Digite o nome do produto: ");
     gets(mercadoria.nome);
 
-    printf("Digite o preÁo do produto: ");
+    printf("Digite o pre√ßo do produto: ");
     scanf("%f", &mercadoria.preco);
 
     printf("Digite a quantidade em estoque: ");
@@ -57,11 +57,11 @@ int main()
     do
     {
 
-        printf("         OP«’ES          \n");
+        printf("         OP√á√ïES          \n");
         printf("1| Realizar uma compra  |\n");
         printf("2| Consultar estoque    |\n");
         printf("3| Sair do programa     |\n");
-        printf("\nEscolha uma opÁ„o: ");
+        printf("\nEscolha uma op√ß√£o: ");
         scanf("%d", &opcao);
 
         system("CLS || CLEAR");
